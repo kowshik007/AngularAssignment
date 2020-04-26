@@ -1,0 +1,5 @@
+<button class="btn btn-primary" (click)="onButtonClick()">Display Details</button>
+<p *ngIf="displayContent">paragraph content</p>
+<div *ngFor="let buttonClickEvent of buttonClickEventList; let i = index" [attr.data-index]="i">
+    <p [ngStyle]="{backgroundColor: i>3?'blue':'white'}" [ngClass]="{whiteColor: i>3}">{{buttonClickEvent}}</p>
+</div>
